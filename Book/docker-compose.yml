@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:5.0.25
+    restart: unless-stopped
+    environment:
+      MONGO_CONNECTION_STRING: "mongodb://uporabnik:geslo@mongo:27017"
+      MONGO_INITDB_ROOT_USERNAME: uporabnik
+      MONGO_INITDB_ROOT_PASSWORD: geslo
+    ports:
+      - "27017:27017"
+    #volumes:
+    #  - ./data:/data/db
+
+  book_api:
+    image: jurek01/book_api:latest
+    depends_on:
+      - mongo
+    ports:
+      - "8088:8080"
+    environment:
+      - SOME_ENV_VAR=nekavrednost
+    restart: always

@@ -1,0 +1,62 @@
+version: '3'
+
+services:
+  bookdb:
+    image: mongo:5.0.25
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: uporabnik
+      MONGO_INITDB_ROOT_PASSWORD: geslo
+    ports:
+      - "27017:27017"
+
+
+  book_api:
+    image: jurek01/book_api:latest
+    depends_on:
+      - bookdb
+    ports:
+      - "8088:8080"
+    environment:
+      MONGO_CONNECTION_STRING: "mongodb://uporabnik:geslo@bookdb:27017"
+    restart: always
+
+  borrowing:
+    image: mongo:5.0.25
+    restart: unless-stopped
+    environment:
+
+      MONGO_INITDB_ROOT_USERNAME: uporabnik
+      MONGO_INITDB_ROOT_PASSWORD: geslo
+    ports:
+      - "27000:27017"
+
+      #colection name: 
+      
+  activemq:
+    image: webcenter/activemq:latest
+    environment:
+      ACTIVEMQ_ADMIN_LOGIN: admin
+      ACTIVEMQ_ADMIN_PASSWORD: admin
+      ACTIVEMQ_WRITE_LOGIN: writer
+      ACTIVEMQ_WRITE_PASSWORD: writer
+      ACTIVEMQ_READ_LOGIN: reader
+      ACTIVEMQ_READ_PASSWORD: reader      
+    ports:
+      - "8161:8161" # Admin console
+      - "61616:61616" # JMS
+      - "5672:5672" # AMQP
+      - "61613:61613" # STOMP
+
+  borrowing_api:
+    image: jurek01/borrowing_api:latest
+    depends_on:
+      - borrowing
+      - activemq
+    ports:
+      - "8089:8080"
+    environment:
+      MONGO_CONNECTION_STRING: "mongodb://uporabnik:geslo@borrowing:27017"
+      AMQP_HOST: "activemq"
+    restart: always
+
