@@ -9,9 +9,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: geslo
     ports:
       - "27017:27017"
-
-
-  book_api:
+  bookapi:
     image: jurek01/book_api:latest
     depends_on:
       - bookdb
@@ -32,6 +30,22 @@ services:
       - "27000:27017"
 
       #colection name: 
+  user:
+    image: mongo:5.0.25
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: uporabnik
+      MONGO_INITDB_ROOT_PASSWORD: geslo
+    ports:
+      - "27018:27017"
+
+  user_api:
+    image: jurek01/user_api:latest
+    environment:
+      MONGO_CONNECTION_STRING: "mongodb://uporabnik:geslo@user:27017"
+      MONGO_DATABASE: "bookshare"
+    ports:
+      - "8080:8080"
       
   activemq:
     image: webcenter/activemq:latest
@@ -59,4 +73,25 @@ services:
       MONGO_CONNECTION_STRING: "mongodb://uporabnik:geslo@borrowing:27017"
       AMQP_HOST: "activemq"
     restart: always
+
+  web_api:
+    image: jurek01/web_api
+    environment:      
+      BOOK_API: http://bookapi:8080/book
+      BORROWING_API: http://borrowing_api:8080/borrowings/  
+      USER_API: http://user_api:8080/user/
+      ASPNETCORE_ENVIRONMENT: Development           
+    ports:
+      - "1000:8080" # STOMP
+
+
+  mobile_api:
+    image: jurek01/mobile_api
+    environment:      
+      BOOK_API: http://bookapi:8080/book
+      BORROWING_API: http://borrowing_api:8080/borrowings/  
+      USER_API: http://user_api:8080/user/
+      ASPNETCORE_ENVIRONMENT: Development           
+    ports:
+      - "2000:8080" # STOMP
 

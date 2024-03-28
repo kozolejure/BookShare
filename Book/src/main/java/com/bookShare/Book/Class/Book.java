@@ -3,10 +3,10 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Products")
+@Document(collection = "books")
 public class Book {
     @Id
-    private ObjectId id;
+    private String id;
     private String title;
     private String description;
     private String author;
@@ -15,7 +15,7 @@ public class Book {
 
 
     // Getterji
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
@@ -39,7 +39,7 @@ public class Book {
 
 
     // Setterji
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

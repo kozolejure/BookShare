@@ -1,0 +1,264 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Repos\\Bookshare\\Web_Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\book\\bookapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\book\\bookapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\book\\bookid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\book\\bookid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\web_api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:web_api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\borrowing\\borrowingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\borrowing\\borrowingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\user\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\user\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\borrowing\\borrowingid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\borrowing\\borrowingid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\borrowing\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\borrowing\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\user\\userid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\user\\userid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|d:\\repos\\bookshare\\web_api\\models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF4891-F065-4966-A356-8C5AC1BAEA6E}|Web_Api.csproj|solutionrelative:models\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web_Api.http",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Web_Api.http",
+              "RelativeDocumentMoniker": "Web_Api.http",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Web_Api.http",
+              "RelativeToolTip": "Web_Api.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-03-28T19:17:57.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BorrowingId.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\borrowing\\BorrowingId.cs",
+              "RelativeDocumentMoniker": "Models\\borrowing\\BorrowingId.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\borrowing\\BorrowingId.cs",
+              "RelativeToolTip": "Models\\borrowing\\BorrowingId.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T11:56:16.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Borrowing.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\borrowing\\Borrowing.cs",
+              "RelativeDocumentMoniker": "Models\\borrowing\\Borrowing.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\borrowing\\Borrowing.cs",
+              "RelativeToolTip": "Models\\borrowing\\Borrowing.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T11:54:45.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BorrowingAPI.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\borrowing\\BorrowingAPI.cs",
+              "RelativeDocumentMoniker": "Models\\borrowing\\BorrowingAPI.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\borrowing\\BorrowingAPI.cs",
+              "RelativeToolTip": "Models\\borrowing\\BorrowingAPI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAACWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T11:58:13.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\book\\Book.cs",
+              "RelativeDocumentMoniker": "Models\\book\\Book.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\book\\Book.cs",
+              "RelativeToolTip": "Models\\book\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T08:42:16.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookAPI.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\book\\BookAPI.cs",
+              "RelativeDocumentMoniker": "Models\\book\\BookAPI.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\book\\BookAPI.cs",
+              "RelativeToolTip": "Models\\book\\BookAPI.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAmwEIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T08:46:48.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookController.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Controllers\\BookController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T08:02:42.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T13:00:41.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookID.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\book\\BookID.cs",
+              "RelativeDocumentMoniker": "Models\\book\\BookID.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\book\\BookID.cs",
+              "RelativeToolTip": "Models\\book\\BookID.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T16:25:16.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T19:17:58.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BorrowController.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Controllers\\BorrowController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BorrowController.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Controllers\\BorrowController.cs",
+              "RelativeToolTip": "Controllers\\BorrowController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T12:20:40.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserApi.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\user\\UserApi.cs",
+              "RelativeDocumentMoniker": "Models\\user\\UserApi.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\user\\UserApi.cs",
+              "RelativeToolTip": "Models\\user\\UserApi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:54:31.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-27T08:02:30.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "user.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\user\\user.cs",
+              "RelativeDocumentMoniker": "Models\\user\\user.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\user\\user.cs",
+              "RelativeToolTip": "Models\\user\\user.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:52:47.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "userID.cs",
+              "DocumentMoniker": "D:\\Repos\\Bookshare\\Web_Api\\Models\\user\\userID.cs",
+              "RelativeDocumentMoniker": "Models\\user\\userID.cs",
+              "ToolTip": "D:\\Repos\\Bookshare\\Web_Api\\Models\\user\\userID.cs",
+              "RelativeToolTip": "Models\\user\\userID.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:56:15.297Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
