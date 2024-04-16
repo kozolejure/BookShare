@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repos\\Bookshare\\Mobile_Api\\Web_Api.csproj": {}
+    "D:\\Repos\\Bookshare\\mobile_Api\\Web_Api.csproj": {}
   },
   "projects": {
-    "D:\\Repos\\Bookshare\\Mobile_Api\\Web_Api.csproj": {
+    "D:\\Repos\\Bookshare\\mobile_Api\\Web_Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repos\\Bookshare\\Mobile_Api\\Web_Api.csproj",
+        "projectUniqueName": "D:\\Repos\\Bookshare\\mobile_Api\\Web_Api.csproj",
         "projectName": "Web_Api",
-        "projectPath": "D:\\Repos\\Bookshare\\Mobile_Api\\Web_Api.csproj",
+        "projectPath": "D:\\Repos\\Bookshare\\mobile_Api\\Web_Api.csproj",
         "packagesPath": "C:\\Users\\Jure Kozole\\.nuget\\packages\\",
-        "outputPath": "D:\\Repos\\Bookshare\\Mobile_Api\\obj\\",
+        "outputPath": "D:\\Repos\\Bookshare\\mobile_Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

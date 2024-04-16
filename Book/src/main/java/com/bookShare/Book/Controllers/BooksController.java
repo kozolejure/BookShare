@@ -38,15 +38,24 @@ public class BooksController {
     }
 
     @PutMapping("/{id}")
-    public Book updateBook(@PathVariable String id, @RequestBody Book BookDetails) {
-        logger.info("updateBook "+ id);
+    public Book updateBook(@PathVariable String id, @RequestBody Book bookDetails) {
+        logger.info("updateBook " + id);
         Book book = bookRepository.findById(id).orElse(null);
 
         if (book != null) {
-            book = BookDetails;
-            bookRepository.save(book);
+            // Posodobite atribute objekta book
+            book.setName(bookDetails.getName());
+            book.setDescription(bookDetails.getDescription());
+            book.setAuthor(bookDetails.getAuthor());
+            book.setImage(bookDetails.getImage());
+            // Preskočite nastavljanje ID-ja tukaj
+        } else {
+            // Če knjiga z danim ID-jem ne obstaja, ročno nastavite ID in ustvarite nov zapis
+            bookDetails.setId(id);
+            book = bookDetails;
         }
 
+        bookRepository.save(book);
         return book;
     }
 

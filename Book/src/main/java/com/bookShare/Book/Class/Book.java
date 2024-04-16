@@ -1,5 +1,4 @@
 package com.bookShare.Book.Class;
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -7,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Book {
     @Id
     private String id;
-    private String title;
+    private String name;
     private String description;
     private String author;
     private String image;
@@ -20,7 +19,7 @@ public class Book {
     }
 
     public String getName() {
-        return title;
+        return name;
     }
 
     public String getDescription() {
@@ -39,6 +38,10 @@ public class Book {
 
 
     // Setterji
+
+    public void setName(String name) {
+        this.name = name;
+    }
     public void setId(String id) {
         this.id = id;
     }
@@ -57,9 +60,9 @@ public class Book {
     }
 
 
-    public Book( String title, String description, String author, String image) {
+    public Book( String name, String description, String author, String image) {
 
-        this.title = title;
+        this.name = name;
         this.description = description;
         this.author = author;
         this.image = image;
