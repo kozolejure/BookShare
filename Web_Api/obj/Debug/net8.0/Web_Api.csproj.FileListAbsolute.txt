@@ -32,3 +32,11 @@ D:\Repos\Bookshare\Web_Api\obj\Debug\net8.0\refint\Web_Api.dll
 D:\Repos\Bookshare\Web_Api\obj\Debug\net8.0\Web_Api.pdb
 D:\Repos\Bookshare\Web_Api\obj\Debug\net8.0\Web_Api.genruntimeconfig.cache
 D:\Repos\Bookshare\Web_Api\obj\Debug\net8.0\ref\Web_Api.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Repos\Bookshare\Web_Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

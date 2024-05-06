@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+const apiUrl = process.env.URL_API || 'http://localhost:1000';
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState({ name: '', surname: '', address: '', city: '', email: '' });
@@ -14,7 +14,11 @@ const Users = () => {
   // GET zahteva za pridobivanje uporabnikov
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:1000/User');
+      const response = await axios.get(apiUrl+'/User', {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setUsers(response.data);
     } catch (error) {
       console.error('Error fetching users:', error);
@@ -24,7 +28,11 @@ const Users = () => {
   // POST zahteva za dodajanje novega uporabnika
   const addUser = async () => {
     try {
-      const response = await axios.post('http://localhost:1000/User', newUser);
+      const response = await axios.post(apiUrl+'/User', newUser,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setUsers([...users, response.data]); // Dodajte novega uporabnika v stanje
       setNewUser({ name: '', surname: '', address: '', city: '', email: '' }); // Ponastavite formo
     } catch (error) {
@@ -35,7 +43,11 @@ const Users = () => {
   // DELETE zahteva za brisanje uporabnika
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:1000/User/${id}`);
+      await axios.delete(apiUrl+`/User/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setUsers(users.filter((user) => user.id !== id)); // Odstranite uporabnika iz stanja
     } catch (error) {
       console.error('Error deleting user:', error);
@@ -46,7 +58,11 @@ const Users = () => {
   const updateUser = async () => {
     try {
       const { id, ...userData } = editingUser;
-      const response = await axios.put(`http://localhost:1000/User/${id}`, userData);
+      const response = await axios.put(apiUrl+`/User/${id}`, userData,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       const updatedUsers = users.map((user) =>
         user.id === id ? response.data : user
       );

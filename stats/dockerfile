@@ -1,0 +1,15 @@
+# Uporabimo Node.js sliko
+FROM node:15
+
+# Nastavitev delovnega imenika
+WORKDIR /usr/src/app
+
+# Namestitev odvisnosti
+COPY package*.json ./
+RUN npm install
+
+# Kopiranje aplikacijske kode
+COPY . .
+
+# Zagon aplikacije
+CMD ["node", "app.js"]

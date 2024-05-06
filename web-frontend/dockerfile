@@ -1,0 +1,29 @@
+# Uporabimo Node.js sliko kot osnovo
+FROM node:alpine as builder
+
+# Nastavimo delovno mapo v Docker kontejnerju
+WORKDIR /app
+
+# Kopiramo package.json in package-lock.json
+COPY package*.json ./
+
+# Namestimo odvisnosti
+RUN npm install
+
+# Kopiramo vse datoteke v trenutni mapi v Docker kontejner
+COPY . .
+
+# Zgradimo aplikacijo
+RUN npm run build
+
+# Uporabimo Nginx sliko kot osnovo za končno sliko
+FROM nginx:alpine
+
+# Kopiramo datoteke iz gradnje React aplikacije v Nginx
+COPY --from=builder /app/build /usr/share/nginx/html
+
+# Nastavimo port, na katerega bo Nginx poslušal
+EXPOSE 80
+
+# Naložimo Nginx
+CMD ["nginx", "-g", "daemon off;"]

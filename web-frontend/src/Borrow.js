@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+const apiUrl = process.env.URL_API || 'http://localhost:1000';
 const Borrowings = () => {
   const [borrowings, setBorrowings] = useState([]);
   const [newBorrowing, setNewBorrowing] = useState({ bookId: '', userId: '', borrowingDate: '', returnDate: '' });
@@ -14,8 +14,11 @@ const Borrowings = () => {
   // GET zahteva za pridobivanje izposoj
   const fetchBorrowings = async () => {
     try {
-      const response = await axios.get('http://localhost:1000/Borrow');
-      setBorrowings(response.data);
+      const response = await axios.get(apiUrl+'/Borrow', {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
     } catch (error) {
       console.error('Error fetching borrowings:', error);
     }
@@ -25,7 +28,11 @@ const Borrowings = () => {
   const addBorrowing = async () => {
     try {
       const { id, ...borrowingData } = newBorrowing;
-      const response = await axios.post('http://localhost:1000/Borrow', borrowingData);
+      const response = await axios.post(apiUrl+'/Borrow', borrowingData,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setBorrowings([...borrowings, response.data]); // Dodajte novo izposojo v stanje
       setNewBorrowing({ bookId: '', userId: '', borrowingDate: '', returnDate: '' }); // Ponastavi formo
     } catch (error) {
@@ -36,7 +43,11 @@ const Borrowings = () => {
   // DELETE zahteva za brisanje izposoje
   const deleteBorrowing = async (id) => {
     try {
-      await axios.delete(`http://localhost:1000/Borrow/${id}`);
+      await axios.delete(apiUrl+`/Borrow/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setBorrowings(borrowings.filter((borrowing) => borrowing.id !== id)); // Odstranite izposojo iz stanja
     } catch (error) {
       console.error('Error deleting borrowing:', error);
@@ -47,7 +58,11 @@ const Borrowings = () => {
   const updateBorrowing = async () => {
     try {
       const { id, ...borrowingData } = editingBorrowing;
-      const response = await axios.put(`http://localhost:1000/Borrow/${id}`, borrowingData);
+      const response = await axios.put(apiUrl+`/Borrow/${id}`, borrowingData,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       const updatedBorrowings = borrowings.map((borrowing) =>
         borrowing.id === id ? response.data : borrowing
       );
@@ -153,7 +168,7 @@ const Borrowings = () => {
         {borrowings.map((borrowing) => (
           <li key={borrowing.id}>
             Book ID: {borrowing.bookId}, User ID: {borrowing.userId}
-            <button onClick={() => editBorrowing(borrowing)}>Edit</button>
+            <button onClick={() => editBorrowing(borrowing)}>Edit</button> 
             <button onClick={() => deleteBorrowing(borrowing.id)}>Delete</button>
           </li>
         ))}

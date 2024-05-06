@@ -91,7 +91,32 @@ services:
       BOOK_API: http://bookapi:8080/book
       BORROWING_API: http://borrowing_api:8080/borrowings/  
       USER_API: http://user_api:8080/user/
+      
       ASPNETCORE_ENVIRONMENT: Development           
     ports:
       - "2000:8080" # STOMP
+
+  auth:
+    image: auth
+    ports:
+      - "2001:3000"
+    environment:
+      NODE_ENV: production
+  web_frontend:
+    image: front_end
+    ports:
+      - "2003:80"
+    environment:
+      URL_API: http://web_api:1000
+
+  stats:
+    image: jurek01/stats
+    ports:
+      - "2004:3000"
+    
+  stats_db:
+    image: mongo:5.0.25
+    ports:
+      - "30002:27017"
+      
 

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const apiUrl = process.env.URL_API || 'http://localhost:1000';
+console.log(apiUrl);
+
 const Books = () => {
   const [books, setBooks] = useState([]);
   const [newBook, setNewBook] = useState({ description: '', author: '', image: '', name: '' });
@@ -14,7 +17,11 @@ const Books = () => {
   // GET zahteva za pridobivanje knjig
   const fetchBooks = async () => {
     try {
-      const response = await axios.get('http://localhost:1000/Book');
+      const response = await axios.get(`${apiUrl}/Book`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setBooks(response.data);
     } catch (error) {
       console.error('Error fetching books:', error);
@@ -24,7 +31,11 @@ const Books = () => {
   // POST zahteva za dodajanje nove knjige
   const addBook = async () => {
     try {
-      const response = await axios.post('http://localhost:1000/Book', newBook);
+      const response = await axios.post(apiUrl+'/Book', newBook,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setBooks([...books, response.data]); // Dodajte novo knjigo v stanje
       setNewBook({ description: '', author: '', image: '', name: '' }); // Ponastavi formo
     } catch (error) {
@@ -35,7 +46,11 @@ const Books = () => {
   // DELETE zahteva za brisanje knjige
   const deleteBook = async (id) => {
     try {
-      await axios.delete(`http://localhost:1000/Book/${id}`);
+      await axios.delete(apiUrl+`/Book/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       setBooks(books.filter((book) => book.id !== id)); // Odstranite knjigo iz stanja
     } catch (error) {
       console.error('Error deleting book:', error);
@@ -45,7 +60,11 @@ const Books = () => {
   // PUT zahteva za posodabljanje knjige
   const updateBook = async () => {
     try {
-      const response = await axios.put(`http://localhost:1000/Book/${editingBook.id}`, editingBook);
+      const response = await axios.put(apiUrl+`/Book/${editingBook.id}`, editingBook ,{
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Vključite žeton v glavo zahteve
+        },
+      });
       const updatedBooks = books.map((book) =>
         book.id === editingBook.id ? response.data : book
       );

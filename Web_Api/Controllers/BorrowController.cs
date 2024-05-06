@@ -1,12 +1,49 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Text;
 using Web_Api.Models.borrowing;
 
 namespace Web_Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [TokenValidationFilter("skrivnost")]
     public class BorrowController : Controller
     {
+
+
+        static async Task Stats(string inputString)
+        {
+            string apiUrl = "http://stats:3000/stats"; // URL vaše storitve
+
+            // Podatki, ki jih želimo poslati v telesu zahtevka
+            string jsonString = "{\"string\": \"" + inputString + "\"}";
+
+            // Ustvarimo novo instanco HttpClient
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    // Pošljemo POST zahtevek z uporabo vsebine JSON
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, new StringContent(jsonString, Encoding.UTF8, "application/json"));
+
+                    // Preverimo, ali je bil odgovor uspešen (status koda 2xx)
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Izpišemo odgovor strežnika
+                        Console.WriteLine("Odgovor strežnika: " + await response.Content.ReadAsStringAsync());
+                    }
+                    else
+                    {
+                        Console.WriteLine("Napaka: " + response.StatusCode);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Napaka pri pošiljanju zahtevka: " + ex.Message);
+                }
+            }
+        }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BorrowingId>>> Get()
@@ -16,7 +53,9 @@ namespace Web_Api.Controllers
             {
                 return NotFound();
             }
+            Stats("Get borrowing");
             return Ok(books);
+            
         }
 
         [HttpGet("{id}", Name = "getBorrowngById")]
@@ -27,6 +66,8 @@ namespace Web_Api.Controllers
             {
                 return NotFound();
             }
+            Stats("Get borrowing");
+
             return Ok(book);
         }
 
@@ -38,8 +79,11 @@ namespace Web_Api.Controllers
             var success = await BorrowingApi.DeleteBorrowingAsync(id);
             if (success)
             {
+                Stats("Get borrowing by id");
+
                 return NoContent();
             }
+
             return NotFound();
         }
 
@@ -50,6 +94,8 @@ namespace Web_Api.Controllers
             var success = await BorrowingApi.CreateBorrowingAsync(Borrowing);
             if (success)
             {
+                Stats("add borrowing");
+
                 return CreatedAtRoute("books", null, Borrowing);
             }
             return BadRequest();
@@ -64,7 +110,9 @@ namespace Web_Api.Controllers
             {
                 return NotFound();
             }
+            Stats("delete borrowing");
             return Ok(boksWhituserId);
+
         }
 
 
@@ -74,6 +122,8 @@ namespace Web_Api.Controllers
             var success = await BorrowingApi.UpdateBorrowingAsync(id, book);
             if (success)
             {
+                Stats("edit borrowing");
+
                 return NoContent();
             }
             return NotFound();
